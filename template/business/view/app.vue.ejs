@@ -1,0 +1,25 @@
+<template>
+    <div class="<%= 'wce-' + mDirName + '-business' %>">
+        <<%= vueName %>>
+        </<%= vueName %>>
+    </div>
+</template>
+
+<script>
+    import api from '@common/js/api'
+    import <%= mName %> from '<%= '@' + mDir %>'
+    <% libs.forEach(function(lib){ %>
+    import <%= lib %> from '<%= lib %>'
+    <% }) %>
+    export default {
+        components: {
+            <%= mName %>
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+    @import "~@common/scss/_common.scss";
+    .<%= 'wce-' + mDirName + '-business' %> {
+    }
+</style>

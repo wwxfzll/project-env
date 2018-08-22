@@ -1,0 +1,23 @@
+<template>
+    <div class="app">
+
+    </div>
+</template>
+
+<script>
+    import api from '@common/js/api'
+    import utils from '@common/js/utils'
+    <% libs.forEach(function(lib){ %>
+    import <%= lib %> from '<%= lib %>'
+    <% }) %>
+    export default {
+
+    }
+</script>
+
+<style lang="scss" scoped>
+    @import "~@common/scss/_common.scss";
+
+    .app {
+    }
+</style>

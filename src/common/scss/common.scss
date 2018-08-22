@@ -1,0 +1,27 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+*:before, *:after {
+    box-sizing: inherit;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", Arial, sans-serif,SimSun;
+}
+
+body{
+    background: #f1f2f7;
+}
+
+.fill{
+    color: rgb(32, 160, 255)
+}

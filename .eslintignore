@@ -1,0 +1,5 @@
+build/*.js
+config/*.js
+nbuild/*.js
+scripts/*.js
+template/*

@@ -1,0 +1,19 @@
+<template>
+	<div class="<%= 'wce-' + mDirName %>">
+
+	</div>
+</template>
+
+<script>
+    import api from '@common/js/api'
+
+    export default {
+        name: '<%= mName %>',
+    }
+</script>
+
+<style lang="scss" scoped>
+	@import "~@common/scss/_common.scss";
+	.<%= 'wce-' + mDirName %> {
+	}
+</style>
