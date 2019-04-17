@@ -13,8 +13,8 @@ const promps = [
         message: '类型',
         choices: [
             {
-                name: 'views',
-                value: 'views'
+                name: 'pages',
+                value: 'pages'
             },
             {
                 name: 'business',
@@ -37,7 +37,7 @@ const promps = [
             return true
         },
         when: function(answers) {
-            return answers.type === 'views'
+            return answers.type === 'pages'
         }
     },
     {
@@ -68,7 +68,7 @@ const promps = [
 ]
 
 inquirer.prompt(promps).then((option) => {
-    if(option.type === 'views') {
+    if(option.type === 'pages') {
         return copyPage(option).then(ejsMap).then(()=>{
             console.log(chalk.green('请重启服务！'))
         }).catch((error)=>{
