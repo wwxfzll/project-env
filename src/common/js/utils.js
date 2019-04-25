@@ -38,20 +38,6 @@ export default {
         return format
     },
     getCompatibleDate (dateString) {
-/*        let dateArr = dateString.split(' ')
-        let ymd = dateArr[0].split('-')
-        let hms = dateArr[1]
-        if (hms) {
-            hms = hms.split(':')
-        }
-        let date = new Date()
-        date.setFullYear(ymd[0], ymd[1] - 1, ymd[2])
-        if (hms) {
-            date.setHours(hms[0])
-            date.setMinutes(hms[1])
-            date.setSeconds(hms[2])
-        }
-        return date */
         if (this.supportNewDate()) {
             return new Date(dateString.replace(/-/g, '/'))
         } else {
@@ -71,32 +57,6 @@ export default {
         if (navigator.userAgent.indexOf('Camino') > 0) {
             return 'Camino'
         }
-    },
-    getBaseDateFormatByForm (form, keys) {
-        let result = Object.assign({}, form)
-        keys.forEach((key) => {
-            let value = form[key]
-            if (value) {
-                result[key] = this.dateFormat('yyyy-MM-dd hh:mm:ss', new Date(form[key]))
-            }
-        })
-        return result
-    },
-    resolveBaseDateFormatByForm (form, keys) {
-        keys.forEach((key) => {
-            if (typeof form[key] === 'string' && form[key]) {
-                form[key] = new Date(form[key])
-            }
-        })
-        return form
-    },
-    getDateFormatByForm (form) {
-        for (let key in form) {
-            if (form.hasOwnProperty(key) & typeof form[key] === 'object' && form[key].$date) {
-                form[key] = this.dateFormat('yyyy-MM-dd hh:mm:ss', new Date(form[key].$date))
-            }
-        }
-        return form
     },
     transformTO (tranvalue) {
         try {
@@ -284,25 +244,6 @@ export default {
             window.open(url)
         }
     },
-    // 排序,例如enterprises.sort(sortingBy("Score_Total"));例如enterprises是个对象数组，对于对象中的Score_Total字段进行排序 num1=1,num2=-1这是高到低,num1=-1,num2=1这是低到高
-    sortingBy (name, num1, num2) {
-        return function (o, p) {
-            var a, b
-            if (typeof o === 'object' && typeof p === 'object' && o && p) {
-                a = o[name]
-                b = p[name]
-                if (a === b) {
-                    return 0
-                }
-                if (typeof a === typeof b) {
-                    return a < b ? num1 : num2
-                }
-                return typeof a < typeof b ? num1 : num2
-            } else {
-                throw ('error')
-            }
-        }
-    },
     getStrByte (str) {
         if (str != null) {
             var cArr = str.match(/[^\x00-\xff]/ig)
@@ -311,16 +252,7 @@ export default {
             return 0
         }
     },
-    getDefalutResponse (response) {
-        if (response.status === '200') {
-            response.result = true
-            response.json = response.data
-        } else {
-            response.result = false
-        }
-        return response
-    },
-    closePage(){
+    closePage (){
         if (navigator.userAgent.indexOf("MSIE") > 0) {
             if (navigator.userAgent.indexOf("MSIE 6.0") > 0) {
                 window.opener = null; window.close();
