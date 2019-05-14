@@ -221,7 +221,7 @@ function setOption(option) {
     const mUrl = `${option.type}/${option.pageUrl}`
     const mDirArr = mUrl.split('/')
     const mDirName = mDirArr.slice(-1)[0]
-    const vueName = `wce-${mDirName}`
+    const vueName = `${mDirName}`
     const mName = setMName(vueName)
     const mDir = `${mDirArr.slice(0, -1).join('/')}/${mDirName}`
     option.vueName = vueName
