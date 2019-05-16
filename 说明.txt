@@ -42,7 +42,7 @@ yarn install --force
 
 ##¶àÒ³ÃæÂ·¾¶ËµÃ÷
 
-src/views/a/b/c.html => src/views/a/b/c/__leo_index__.html£¨Ö»ÄÜÔÚviewsÏÂ´´½¨£¬Ä¿Â¼ÏÂ±ØĞëÓĞ__leo_index__.html,__leo_index__.jsÕâ2¸öÎÄ¼ş£¬Ä£°æ¿ÉÒÔ¿½±´templateÏÂindex,ÎÄ¼ş¼ĞÃû³Æ¾ÍÊÇ±àÒëºóµÄhtmlÃû³Æ£©
+src/pages/a/b/c.html => src/pages/a/b/c/__leo_index__.html£¨Ö»ÄÜÔÚpagesÏÂ´´½¨£¬Ä¿Â¼ÏÂ±ØĞëÓĞ__leo_index__.html,__leo_index__.jsÕâ2¸öÎÄ¼ş£¬Ä£°æ¿ÉÒÔ¿½±´templateÏÂindex,ÎÄ¼ş¼ĞÃû³Æ¾ÍÊÇ±àÒëºóµÄhtmlÃû³Æ£©
 
 
 ##mock  ([mockÎÄµµ](http://mockjs.com/))
@@ -59,7 +59,7 @@ src/views/a/b/c.html => src/views/a/b/c/__leo_index__.html£¨Ö»ÄÜÔÚviewsÏÂ´´½¨£¬Ä
 '@' -> src
 '@assets' -> src/assets
 '@components' -> src/components
-'@views' -> src/views
+'@pages' -> src/pages
 '@common' -> src/common
 '@lib' -> src/lib
 '@business' -> src/business
@@ -87,7 +87,7 @@ jquery: [ÎÄµµ](http://www.css88.com/jqapi-1.9/)
 
 ##Ä¿Â¼¹æ·¶
 
-- 1 src/views ±ØĞë¶¼ÊÇÒ³ÃæÏà¹Ø´úÂë
+- 1 src/pages ±ØĞë¶¼ÊÇÒ³ÃæÏà¹Ø´úÂë
 - 2 src/assets È«¾Ö×ÊÔ´ÎÄ¼ş£¨²»ÄÜÉÃ×Ô¸Ä¶¯£¬ÓĞĞèÇóÕÒÏà¹ØÎ¬»¤ÈËÔ±£©
 - 3 src/components È«¾ÖVUEÍ¨ÓÃ×é¼ş¿â£¨²»ÄÜÉÃ×Ô¸Ä¶¯£¬ÓĞĞèÇóÕÒÏà¹ØÎ¬»¤ÈËÔ±£©
 - 4 src/business È«¾ÖVUEÒµÎñ×é¼ş¿â£¨²»ÄÜÉÃ×Ô¸Ä¶¯£¬ÓĞĞèÇóÕÒÏà¹ØÎ¬»¤ÈËÔ±£©

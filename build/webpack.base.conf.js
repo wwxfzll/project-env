@@ -33,7 +33,7 @@ module.exports = {
             '@assets': utils.resolve('src/assets'),
             '@components': utils.resolve('src/components'),
             '@plugins': utils.resolve('src/plugins'),
-            '@views': utils.resolve('src/views'),
+            '@pages': utils.resolve('src/pages'),
             '@common': utils.resolve('src/common'),
             '@lib': utils.resolve('src/lib'),
             '@business': utils.resolve('src/business')
