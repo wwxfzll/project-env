@@ -100,13 +100,15 @@ module.exports = {
             compress: {
                 // 在UglifyJs删除没有用到的代码时不输出警告
                 warnings: false,
-                // 删除所有的 `console` 语句
+                // 删除所有的 `console` 语句，为true会影响console.error函数无法提示错误信息
                 // 还可以兼容ie浏览器
-                drop_console: true,
+                drop_console: false,
                 // 内嵌定义了但是只用到一次的变量
                 collapse_vars: true,
                 // 提取出出现多次但是没有定义成变量去引用的静态值
                 reduce_vars: true,
+                //移除不需要的函数调用
+                pure_funcs: ['console.log']
             },
             sourceMap: true
         }),
